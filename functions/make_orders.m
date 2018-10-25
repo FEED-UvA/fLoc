@@ -30,7 +30,7 @@ for oo = 1:num_orders
         new = order; a = randi(num_trials); b = randi(num_trials);
         swap = new(a); new(a) = new(b); new(b) = swap;
         % calculate and minimize the energy in the new design
-        new_energy = sum(sum(abs(gethistory(new) - goal)));
+        new_energy = sum(sum(abs(get_history(new) - goal)));
         if new_energy > 13
             if new_energy < old_energy
                 order = new;
