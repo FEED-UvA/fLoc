@@ -5,7 +5,7 @@ fLoc = fLocSequence(stim_set, num_runs, task_num);
 seq = fLoc.make_runs();
 
 for i = 1:num_runs
-   fname = sprintf('task-localizer_run-%i_stims.tsv', i);
+   fname = sprintf('task-localizer_session-0%i_stims.tsv', i);
    fileID = fopen(fname, 'w');
    fprintf(fileID, '%s\t%s\t%s\n', 'stim_name', 'stim_onset', 'task_probe');
    
